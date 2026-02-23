@@ -1,0 +1,11 @@
+VALIDATION REPORT FOR NITESH SAW
+================================
+Date: {date}
+
+ACCURACY CHECK: {status}
+LINK CHECK: {link_status}
+REQUIREMENTS CHECK: {req_status}
+
+DETAILS:
+-------
+{log_details}

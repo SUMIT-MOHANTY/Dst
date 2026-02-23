@@ -1,0 +1,6 @@
+{
+  "name": "Nitesh Saw",
+  "role": "Security Analyst",
+  "sections": ["About", "Projects", "Contact"],
+  "links": { "GitHub": "https://github.com/niteshsaw", "LinkedIn": "https://linkedin.com/in/niteshsaw" }
+}

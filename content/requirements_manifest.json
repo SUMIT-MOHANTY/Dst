@@ -1,0 +1,6 @@
+{
+  "name": "Nitesh Saw",
+  "role": "Security Analyst",
+  "required_sections": ["About", "Projects", "Contact"],
+  "must_have_links": ["GitHub", "LinkedIn"]
+}
