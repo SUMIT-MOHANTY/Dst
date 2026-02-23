@@ -1,0 +1,12 @@
+{
+  "name": "frontend-animations",
+  "version": "1.0.0",
+  "dependencies": {
+    "framer-motion": "^10.16.4",
+    "react": "^18.2.0"
+  },
+  "scripts": {
+    "build": "vite build",
+    "lint": "eslint src/"
+  }
+}
