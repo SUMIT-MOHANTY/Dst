@@ -1,0 +1,5 @@
+flask>=3.0.0
+bleach>=6.1.0
+validators>=0.22.0
+werkzeug>=3.0.0
+
