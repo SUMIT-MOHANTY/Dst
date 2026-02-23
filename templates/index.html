@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nitesh Saw - Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; padding: 40px 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .header h1 { font-size: 3em; margin-bottom: 10px; }
+        .header p { font-size: 1.2em; opacity: 0.9; }
+        .section { background: white; border-radius: 10px; padding: 30px; margin: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .section h2 { color: #667eea; margin-bottom: 20px; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .skill-card { background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center; }
+        .skill-bar { height: 8px; background: #e0e0e0; border-radius: 4px; margin-top: 10px; overflow: hidden; }
+        .skill-fill { height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 4px; }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .project-card { border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; transition: transform 0.3s; }
+        .project-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .project-title { font-size: 1.3em; color: #667eea; margin-bottom: 10px; }
+        .project-tech { font-size: 0.85em; color: #888; margin-top: 15px; }
+        .links { margin-top: 10px; }
+        .links a { color: #667eea; text-decoration: none; margin-right: 15px; }
+        .links a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>{{ profile.name if profile else 'Loading...' }}</h1>
+        <p>{{ profile.title if profile else '' }}</p>
+        <div class="links">
+            {% if profile %}
+            <a href="{{ profile.github }}">GitHub</a>
+            <a href="{{ profile.linkedin }}">LinkedIn</a>
+            <a href="mailto:{{ profile.email }}">{{ profile.email }}</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="container">
+        <div class="section">
+            <h2>About Me</h2>
+            <p>{{ profile.bio if profile else 'Loading...' }}</p>
+        </div>
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                {% for skill in skills %}
+                <div class="skill-card">
+                    <strong>{{ skill.name }}</strong>
+                    <small>{{ skill.category }}</small>
+                    <div class="skill-bar"><div class="skill-fill" style="width: {{ skill.level }}%"></div></div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="section">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                {% for project in projects %}
+                <div class="project-card">
+                    <div class="project-title">{{ project.name }}</div>
+                    <p>{{ project.description }}</p>
+                    <div class="project-tech">{{ project.technologies }}</div>
+                    <div class="links">
+                        <a href="{{ project.github_url }}">Code</a>
+                        {% if project.live_url %}<a href="{{ project.live_url }}">Live Demo</a>{% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
