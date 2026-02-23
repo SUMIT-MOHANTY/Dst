@@ -1,0 +1,3 @@
+Pillow>=10.0.0
+csscompressor>=0.1.9
+jsmin>=3.0.1
