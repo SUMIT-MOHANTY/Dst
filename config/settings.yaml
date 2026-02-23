@@ -1,0 +1,17 @@
+model_config:
+  provider: "openai"
+  model_name: "gpt-4-turbo-preview"
+  temperature: 0.2
+  max_tokens: 500
+  api_key_env_var: "OPENAI_API_KEY"
+
+security_config:
+  max_input_length: 1000  # Prevent DDoS via massive prompts
+  allowed_topics:
+    - "billing"
+    - "account"
+    - "product_help"
+  blocked_patterns:
+    - "ignore previous instructions"
+    - "system prompt"
+    - "jailbreak"
