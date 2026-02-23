@@ -1,0 +1,28 @@
+{
+    "name": "Nitesh Saw",
+    "title": "Full Stack Developer & Technology Enthusiast",
+    "initials": "NS",
+    "bio": "Passionate about building innovative solutions and pushing the boundaries of technology. With expertise in modern web development and a keen eye for design, I transform complex problems into elegant user experiences.",
+    "socials": [
+        {"platform": "GitHub", "url": "https://github.com/niteshsaw", "icon": "GH"},
+        {"platform": "LinkedIn", "url": "https://linkedin.com/in/niteshsaw", "icon": "LI"}
+    ],
+    "background": [
+        {
+            "date": "2022 - Present",
+            "title": "Senior Software Engineer",
+            "organization": "Tech Innovation Labs"
+        },
+        {
+            "date": "2020 - 2022",
+            "title": "Full Stack Developer",
+            "organization": "Digital Solutions Inc"
+        }
+    ],
+    "skills": ["JavaScript", "Python", "React", "Node.js", "TypeScript"],
+    "contact": {
+        "location": "San Francisco, CA",
+        "email": "nitesh@saw.dev",
+        "website": "niteshsaw.dev"
+    }
+}
