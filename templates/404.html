@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}404 - Page Not Found{% endblock %}
+{% block content %}
+<div class='error-box'>
+    <div class='error-icon'>🔍</div>
+    <h1 class='error-title'>404</h1>
+    <h2 class='error-subtitle'>Page Not Found</h2>
+    <p class='error-message'>
+        Oops! The page you're looking for doesn't exist or has been moved.
+        Please check the URL or return to the homepage.
+    </p>
+    <div class='error-actions'>
+        <a href='/' class='btn btn-primary'>Go to Homepage</a>
+        <button onclick='history.back()' class='btn btn-secondary'>Go Back</button>
+    </div>
+</div>
+{% endblock %}

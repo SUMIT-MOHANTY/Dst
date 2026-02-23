@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}500 - Server Error{% endblock %}
+{% block content %}
+<div class='error-box'>
+    <div class='error-icon'>⚠️</div>
+    <h1 class='error-title'>500</h1>
+    <h2 class='error-subtitle'>Internal Server Error</h2>
+    <p class='error-message'>
+        Something went wrong on our end. Our team has been notified 
+        and is working to fix the issue. Please try again later.
+    </p>
+    <div class='error-actions'>
+        <a href='/' class='btn btn-primary'>Go to Homepage</a>
+        <a href='/contact' class='btn btn-secondary'>Contact Support</a>
+    </div>
+</div>
+{% endblock %}
