@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Admin{% endblock %}
+{% block content %}
+<div class='admin-dashboard'>
+    <h1>Admin Dashboard</h1>
+    <div class='stats'>
+        <div class='stat-box'>
+            <h3>{{ messages|length }}</h3>
+            <p>Total Messages</p>
+        </div>
+    </div>
+    <div class='messages-list'>
+        <h2>Contact Messages</h2>
+        {% for msg in messages %}
+        <div class='message-item'>
+            <strong>{{ msg.name }}</strong> ({{ msg.email }})
+            <p>{{ msg.message }}</p>
+        </div>
+        {% else %}
+        <p>No messages yet.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
