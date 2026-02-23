@@ -1,5 +1,6 @@
 # Nitesh Saw Portfolio
 
+<<<<<<< HEAD
 A responsive portfolio website showcasing projects and skills.
 
 ## Features
@@ -18,3 +19,13 @@ A responsive portfolio website showcasing projects and skills.
 ## Usage
 
 Simply open index.html in a web browser.
+=======
+## Setup
+1. Place files in a web server directory.
+2. Ensure mod_headers and mod_expires are enabled in Apache.
+
+## Security
+- Content Security Policy enforced in `.htaccess`.
+- Responsive meta tag included for mobile scaling.
+- Semantic HTML5 used for accessibility.
+>>>>>>> b523a65 (Agent: Main Layout & Navigation Development)
