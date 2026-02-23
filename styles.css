@@ -1,0 +1,59 @@
+:root {
+    --bg-color: #f4f4f9;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --accent-color: #4a90e2;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.bar-container {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 10px;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: var(--accent-color);
+    width: 0%;
+    border-radius: 4px;
+    transition: width 1s ease-out;
+}
+
+/* Mitigation for Accessibility: Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .bar-fill {
+        transition: none;
+        width: var(--final-width) !important;
+    }
+}
