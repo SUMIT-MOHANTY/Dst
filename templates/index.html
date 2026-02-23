@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+<header class='hero'>
+    <div class='hero-content fade-in'>
+        <h1 class='slide-up'>Welcome to My Portfolio</h1>
+        <p class='slide-up delay-1'>Creating amazing digital experiences</p>
+        <button class='btn pulse-animation'>Get Started</button>
+    </div>
+</header>
+
+<section id='about' class='about'>
+    <div class='container'>
+        <h2 class='fade-in-scroll'>About Me</h2>
+        <div class='about-grid'>
+            <div class='card hover-lift fade-in-scroll'>
+                <div class='icon rotate-on-hover'>🎨</div>
+                <h3>Design</h3>
+                <p>Beautiful and intuitive user interfaces</p>
+            </div>
+            <div class='card hover-lift fade-in-scroll'>
+                <div class='icon rotate-on-hover'>💻</div>
+                <h3>Development</h3>
+                <p>Clean and efficient code solutions</p>
+            </div>
+            <div class='card hover-lift fade-in-scroll'>
+                <div class='icon rotate-on-hover'>🚀</div>
+                <h3>Performance</h3>
+                <p>Fast and responsive applications</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id='contact' class='contact'>
+    <div class='container'>
+        <h2 class='fade-in-scroll'>Get In Touch</h2>
+        <form id='contact-form' class='contact-form'>
+            <input type='text' id='name' placeholder='Your Name' required>
+            <input type='email' id='email' placeholder='Your Email' required>
+            <input type='text' id='subject' placeholder='Subject' required>
+            <textarea id='message' placeholder='Your Message' rows='5' required></textarea>
+            <button type='submit' class='btn btn-primary'>Send Message</button>
+        </form>
+        <div id='success-message' class='success-message hidden'>
+            ✅ Message sent successfully!
+        </div>
+    </div>
+</section>
+<!-- Admin Login Modal -->
+<div id='admin-modal' class='modal hidden'>
+    <div class='modal-content'>
+        <span class='close' onclick='closeModal()'>&times;</span>
+        <h2>Admin Login</h2>
+        <input type='password' id='admin-password' placeholder='Enter Password'>
+        <button onclick='adminLogin()' class='btn btn-primary'>Login</button>
+    </div>
+</div>
+{% endblock %}
