@@ -1,0 +1,14 @@
+{
+  "budgets": [
+    {
+      "path": "./dist/output.css",
+      "maxSize": "15 kB",
+      "warning": "10 kB"
+    },
+    {
+      "path": "./src/main.js",
+      "maxSize": "30 kB",
+      "warning": "20 kB"
+    }
+  ]
+}
