@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+venv/
+playwright-report/
+test-results/
+.bandit
