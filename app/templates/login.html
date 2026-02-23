@@ -1,0 +1,10 @@
+<!doctype html>
+<html><body>
+<h1>Login</h1>
+<form method="POST">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+  <input type="text" name="userid" placeholder="User ID" value="1"/><br/>
+  <input type="password" name="password" placeholder="Password"/><br/>
+  <button type="submit">Login</button>
+</form>
+</body></html>

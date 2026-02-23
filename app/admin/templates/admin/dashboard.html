@@ -1,0 +1,29 @@
+<?DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+        header { background: #333; color: white; padding: 15px; display: flex; justify-content: space-between; }
+        nav a { color: white; margin-left: 15px; text-decoration: none; }
+        .welcome { margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin Portal</h1>
+        <nav>
+            <span>Welcome, {{ user.username }}</span>
+            <a href="/admin/dashboard">Dashboard</a>
+            <a href="/admin/settings">Settings</a>
+            <a href="/admin/users">Users</a>
+            <a href="/auth/logout">Logout</a>
+        </nav>
+    </header>
+    <div class="welcome">
+        <h2>Dashboard</h2>
+        <p>Welcome to the secure admin dashboard.</p>
+    </div>
+</body>
+</html>
