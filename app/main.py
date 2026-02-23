@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from flask import Flask, request, jsonify
 from pydantic import ValidationError
 from app.config import settings
@@ -33,3 +34,48 @@ def generate():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+=======
+from fastapi import FastAPI, HTTPException, Depends, Header
+from pydantic import BaseModel, Field
+import os
+from openai import OpenAI
+import uvicorn
+
+app = FastAPI(title="AI API Service")
+
+class AIRequest(BaseModel):
+    prompt: str = Field(..., min_length=1, max_length=4000)
+    model: str = Field(default="gpt-4")
+
+class AIResponse(BaseModel):
+    response: str
+    model: str
+
+def get_api_key(x_api_key: str = Header(..., alias="X-API-Key")):
+    if not x_api_key or x_api_key != os.getenv("SERVICE_API_KEY", "dev-key"):
+        raise HTTPException(status_code=401, detail="Invalid API key")
+    return x_api_key
+
+@app.get("/health")
+def health_check():
+    return {"status": "healthy"}
+
+@app.post("/api/generate", response_model=AIResponse)
+def generate(request: AIRequest, api_key: str = Depends(get_api_key)):
+    openai_key = os.getenv("OPENAI_API_KEY")
+    if not openai_key:
+        raise HTTPException(status_code=500, detail="OpenAI API key not configured")
+    client = OpenAI(api_key=openai_key)
+    try:
+        response = client.chat.completions.create(
+            model=request.model,
+            messages=[{"role": "user", "content": request.prompt}]
+        )
+        ai_text = response.choices[0].message.content
+        return AIResponse(response=ai_text, model=request.model)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+>>>>>>> aceb7be (Agent: AI Feature Backend Service)

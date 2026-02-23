@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  ai-service:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - SERVICE_API_KEY=${SERVICE_API_KEY:-dev-key}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    restart: unless-stopped

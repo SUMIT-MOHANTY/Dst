@@ -1,5 +1,13 @@
 __pycache__/
 *.pyc
 .env
+<<<<<<< HEAD
 venv/
 .DS_Store
+=======
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+>>>>>>> aceb7be (Agent: AI Feature Backend Service)
