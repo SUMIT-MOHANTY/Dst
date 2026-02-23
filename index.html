@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessible Website</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header role="banner">
+<nav role="navigation" aria-label="Main navigation">
+<ul>
+<li><a href="#main" class="skip-link">Skip to main content</a></li>
+<li><a href="#" aria-current="page">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+<main id="main" role="main">
+<section aria-labelledby="products-heading">
+<h1 id="products-heading">Our Products</h1>
+<article>
+<h2>Product A</h2>
+<p>Description of product A goes here.</p>
+<button aria-label="Add Product A to cart">Add to Cart</button>
+</article>
+<article>
+<h2>Product B</h2>
+<p>Description of product B goes here.</p>
+<button aria-label="Add Product B to cart">Add to Cart</button>
+</article>
+</section>
+<section aria-labelledby="contact-heading">
+<h2 id="contact-heading">Contact Us</h2>
+<form role="form" aria-labelledby="contact-heading">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required aria-required="true">
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required aria-required="true">
+<button type="submit">Submit</button>
+</form>
+</section>
+</main>
+<footer role="contentinfo">
+<p>&copy; 2024 Accessible Site. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
