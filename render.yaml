@@ -1,0 +1,16 @@
+services:
+- type: web
+  name: production-app
+  env: python
+  region: oregon
+  plan: starter
+  buildCommand: pip install -r requirements.txt
+  startCommand: gunicorn app:app -c gunicorn_config.py
+  healthCheckPath: /health
+  envVars:
+  - key: FLASK_ENV
+    value: production
+  - key: PORT
+    value: 5000
+  domains:
+  - secure-app.example.com
