@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Live Demo</title>
+    <link rel='stylesheet' href='/static/styles.css'>
+</head>
+<body>
+    <nav class='navbar'>
+        <div class='logo'>DemoApp</div>
+        <ul>
+            <li><a href='#home'>Home</a></li>
+            <li><a href='#features'>Features</a></li>
+            <li><a href='#contact'>Contact</a></li>
+            <li><a href='/admin'>Admin</a></li>
+        </ul>
+    </nav>
+    <section id='home' class='hero'>
+        <div class='hero-content fade-in'>
+            <h1>Welcome to DemoApp</h1>
+            <p>Built with Flask and pure animations</p>
+            <button class='cta-btn slide-up'>Get Started</button>
+        </div>
+    </section>
+    <section id='features' class='features'>
+        <h2 class='section-title'>Features</h2>
+        <div class='feature-cards'>
+            <div class='card fade-in-up'><h3>Fast</h3><p>Lightning fast performance</p></div>
+            <div class='card fade-in-up' style='animation-delay: 0.2s'><h3>Secure</h3><p>Enterprise security</p></div>
+            <div class='card fade-in-up' style='animation-delay: 0.4s'><h3>Scalable</h3><p>Grows with you</p></div>
+        </div>
+    </section>
+    <section id='contact' class='contact'>
+        <h2 class='section-title'>Contact Us</h2>
+        <form id='contact-form' class='fade-in'>
+            <input type='text' name='name' placeholder='Your Name' required>
+            <input type='email' name='email' placeholder='Your Email' required>
+            <textarea name='message' placeholder='Your Message' rows='5' required></textarea>
+            <button type='submit' class='submit-btn'>Send Message</button>
+        </form>
+        <div id='form-status'></div>
+    </section>
+    <script src='/static/script.js'></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: #f4f6f9; }
+.admin-container { min-height: 100vh; }
+.admin-header { background: #34495e; color: #fff; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+.logout-btn { padding: 0.5rem 1rem; background: #e74c3c; color: #fff; border: none; border-radius: 5px; text-decoration: none; }
+.admin-main { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+.dashboard-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+.stat-card { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.stat-number { font-size: 2rem; color: #3498db; font-weight: bold; }
+.recent-activity { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.recent-activity ul { list-style: none; }
+.recent-activity li { padding: 0.5rem 0; border-bottom: 1px solid #ecf0f1; }
+.login-page { display: flex; align-items: center; justify-content: center; min-height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.login-container { background: #fff; padding: 2rem 3rem; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); text-align: center; }
+.login-container form { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+.login-container input { padding: 0.75rem; border: 1px solid #ddd; border-radius: 5px; }
+.login-container button { padding: 0.75rem; background: #667eea; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
