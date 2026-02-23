@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Secure Flask App</title>
+</head>
+<body>
+    <h1>Secure Flask Application</h1>
+    <p>This application implements HTTPS enforcement, CORS, and CSRF protection.</p>
+    <div id="response"></div>
+    <script>
+        fetch('/api/data')
+            .then(r => r.json())
+            .then(d => document.getElementById('response').innerHTML = '<pre>' + JSON.stringify(d, null, 2) + '</pre>');
+    </script>
+</body>
+</html>
