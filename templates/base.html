@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your page description for SEO">
+    <meta name="keywords" content="relevant, seo, keywords">
+    <meta name="author" content="Your Organization">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Page Title">
+    <meta property="og:description" content="Page Description">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Page Title - SEO Optimized</title>
+    {% if cookie_consent %}
+    <script src="/static/js/analytics.js" defer></script>
+    {% endif %}
+</head>
+<body>
+    <div id="cookie-banner" class="hidden">We use cookies for analytics. <a href="/privacy">Learn more</a> <button id="accept-cookies">Accept</button></div>
+    {% block content %}{% endblock %}
+</body>
+</html>
