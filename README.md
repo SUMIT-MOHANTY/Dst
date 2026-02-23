@@ -1,25 +1,37 @@
-# Responsive Website Header & Footer
+# Responsive Header & Footer
 
-A clean, responsive website with navigation header and social media footer.
+A fully responsive website header with navigation links and footer with social media icons and contact information.
 
 ## Features
-- Responsive header with logo and navigation links
-- Mobile hamburger menu for smaller screens
-- Footer with contact information and social media icons
-- Fully responsive design using CSS Grid and Flexbox
+
+- **Responsive Header** with sticky positioning
+- **Navigation Menu** with smooth hover effects
+- **Mobile Hamburger Menu** for small screens
+- **Footer** with:
+  - Contact information (email, phone, address)
+  - Social media icons (Facebook, Twitter, Instagram, LinkedIn, YouTube)
+  - Quick links section
+
+## Responsive Breakpoints
+
+- Desktop: > 768px
+- Tablet: 767px - 481px
+- Mobile: <= 480px
 
 ## Files
+
 - `index.html` - Main HTML structure
-- `styles.css` - Responsive CSS styling
+- `styles.css` - All styling and responsive design
 - `script.js` - Mobile menu toggle functionality
 
 ## Usage
-Simply open `index.html` in a web browser to view the website.
 
-## Responsive Breakpoints
-- Desktop: > 768px
-- Mobile: <= 768px
+Simply open `index.html` in a web browser to view the header and footer.
 
 ## Dependencies
-- Font Awesome 6.4.0 (CDN) - For social media icons
 
+- Font Awesome (via CDN) for social media icons
+
+## Browser Support
+
+Works in all modern browsers (Chrome, Firefox, Safari, Edge).

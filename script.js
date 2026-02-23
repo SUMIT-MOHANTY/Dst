@@ -1,10 +1,24 @@
 const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
+const nav = document.getElementById('nav');
+
 hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('active');
 });
-document.querySelectorAll('.nav-links a').forEach(link => {
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+    }
+});
+
+// Close menu when clicking on a nav link (optional)
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
     });
 });
