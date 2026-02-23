@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Integration</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+</head>
+<body>
+    <h1>Flask + JS Integration</h1>
+    <div id="status">Idle</div>
+    <button id="load-btn">Fetch Data</button>
+    <ul id="data-container"></ul>
+
+    <script type="module" src="/static/js/app.js"></script>
+</body>
+</html>
