@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Admin Panel</h1>
+<h2>Edit Bio</h2>
+<form method='POST' action='{{ url_for("update_bio") }}'>
+    <textarea name='bio' placeholder='Enter your bio...'>{{ bio }}</textarea>
+    <button type='submit' class='btn btn-success'>Update Bio</button>
+</form>
+<h2>Manage Projects</h2>
+<h3>Add New Project</h3>
+<form method='POST' action='{{ url_for("add_project") }}'>
+    <input type='text' name='title' placeholder='Project Title' required>
+    <textarea name='description' placeholder='Project Description' required></textarea>
+    <input type='text' name='link' placeholder='Project Link (optional)'>
+    <button type='submit' class='btn btn-primary'>Add Project</button>
+</form>
+<h3>Existing Projects</h3>
+{% if projects %}
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Link</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for project in projects %}
+            <tr>
+                <td>{{ project.title }}</td>
+                <td>{{ project.description }}</td>
+                <td>{{ project.link or '-' }}</td>
+                <td>
+                    <a href='{{ url_for("delete_project", pid=project.id) }}' class='btn btn-danger' onclick='return confirm("Are you sure?")'>Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No projects found. Add one above!</p>
+{% endif %}
+{% endblock %}
